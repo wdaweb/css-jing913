@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 250px;
+      height: 250px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: black;
+      /* 水平垂直居中 */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 腮紅 */
+    .container::before {
+      content: "";
+      width: 70px;
+      height: 70px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: red;
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: red;
+      position: absolute;
+      top: 50%;
+      right: -22%;
+      transform: translate(-50%, -50%);
+    }
+
+    .leftear::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      top: 10%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+    }
+
+    .leftear::after {
+      content: "";
+      width: 23px;
+      height: 23px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      top: 10%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+    }
+
+    .rightear::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      top: 9%;
+      right: 3%;
+      transform: translate(-50%, -50%);
+    }
+
+    .rightear::after {
+      content: "";
+      width: 23px;
+      height: 23px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      top: 9%;
+      right: 9.5%;
+      transform: translate(-50%, -50%);
+    }
+
+    .lefteye::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .lefteye::after {
+      content: "";
+      width: 33px;
+      height: 33px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .right {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .righteye::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      top: 30%;
+      right: 10%;
+      transform: translate(-50%, -50%);
+    }
+
+    .righteye::after {
+      content: "";
+      width: 33px;
+      height: 33px;
+      /* 畫圓 */
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      top: 30%;
+      right: 17%;
+      transform: translate(-50%, -50%);
+    }
+
+    .nose-mouth {
+      width: 100px;
+      height: 68px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 鼻子 */
+    .nose-mouth::before {
+      content: "";
+      width: 25px;
+      height: 16px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 嘴巴 */
+    .nose-mouth::after {
+      content: "";
+      width: 68px;
+      height: 23px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      bottom: 6%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* v領 */
+    .vmark {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .vmark::before {
+      content: "";
+      width: 45px;
+      height: 45px;
+      background: white;
+      position: absolute;
+      bottom: 0%;
+      left: 40%;
+      transform: translate(-50%, -50%) skewX(50deg);
+    }
+
+    .vmark::after {
+      content: "";
+      width: 45px;
+      height: 45px;
+      background: white;
+      position: absolute;
+      bottom: 0%;
+      right: 20%;
+      transform: translate(-50%, -50%) skewX(-50deg) rotateY(360deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 腮紅 -->
+    <!-- <div class="red"></div> -->
+    <!-- 耳朵 -->
+    <div class="leftear">
+      <!-- before -->
+      <!-- after -->
+    </div>
+    <div class="rightear">
+      <!-- before -->
+      <!-- after -->
+    </div>
+    <!-- 左眼 -->
+    <div class="lefteye">
+      <!-- before -->
+      <!-- after -->
+    </div>
+    <!-- 右眼 -->
+    <div class="righteye">
+      <!-- before -->
+      <!-- after -->
+    </div>
+    <!-- 鼻子嘴巴 -->
+    <div class="nose-mouth">
+      <!-- before -->
+      <!-- after -->
+    </div>
+    <!-- v領 -->
+    <div class="vmark"></div>
+  </div>
+</body>
+
+</html>

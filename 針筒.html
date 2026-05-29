@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      /* margin: 0; */
+      /* padding: 0; */
+      box-sizing: border-box;
+    }
+
+    .Syringe {
+      width: 600px;
+      height: 100px;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .Syringe-head {
+      width: 100px;
+      height: 80px;
+      position: absolute;
+      top: 10%;
+      right: 0%;
+    }
+
+    .Syringe-head::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      border-radius: 15%;
+
+      box-shadow: inset 0 0.1em 0.8em gray;
+
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+    }
+
+    .Syringe-head::after {
+      content: "";
+      width: 60px;
+      height: 1px;
+      background-color: rgb(39, 37, 37);
+
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      transform: translateY(-50%);
+    }
+
+    .middle {
+      width: 400px;
+      height: 80px;
+      border: 1px solid #000;
+      background:
+        /* 刻度 */
+        linear-gradient(90deg, transparent 9px, gray 9px) repeat-x left top/ 10px 10px,
+        /* 黃色漸層*/
+        linear-gradient(to right, white 50%, rgb(245, 238, 149) 0%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .middle span {
+      color: gray;
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+    }
+
+    .middle::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 500;
+      left: 0;
+      margin: auto;
+      width: 50px;
+      height: 50px;
+    }
+
+    .middle::after {
+      content: "";
+      width: 42px;
+      height: 79px;
+      background: black;
+
+      position: absolute;
+      /* 對齊中間上方 */
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .Syringe-foot {
+      width: 80px;
+      height: 80px;
+
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+    }
+
+    .Syringe-foot::before {
+      content: "";
+      width: 40px;
+      height: 80px;
+      box-shadow: inset 0 0.1em 0.8em gray;
+      border-radius: 15%;
+
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
+
+    .Syringe-foot::after {
+      content: "";
+      width: 40px;
+      height: 60px;
+
+      box-shadow: inset 0 0.1em 0.8em gray;
+
+      position: absolute;
+      top: 50%;
+      right: -25%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Syringe">
+    <!-- 針頭 -->
+    <div class="Syringe-head">
+      <!-- 前是左 -->
+      <!-- 後右 -->
+    </div>
+    <!-- 中間 -->
+    <div class="middle">
+      <span>Made in Taiwan</span>
+      <!-- 前是左 -->
+      <!-- 後右 -->
+    </div>
+    <!-- 尾巴 -->
+    <div class="Syringe-foot">
+      <!-- 前是左 -->
+      <!-- 後右 -->
+    </div>
+
+  </div>
+
+</body>
+
+</html>
